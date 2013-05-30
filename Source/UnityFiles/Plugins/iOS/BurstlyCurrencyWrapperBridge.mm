@@ -68,6 +68,8 @@ static BurstlyCurrencyWrapperBridge *_sharedInstance;
 		[[BurstlyCurrency sharedCurrencyManager] setPublisherId:publisherId andUserId:userId];
 	}
 	
+	[[BurstlyCurrency sharedCurrencyManager] setDelegate:self];
+	
 	_initialized = YES;
 	
 	[[BurstlyCurrencyWrapperBridge sharedInstance] updateBalancesFromServer];

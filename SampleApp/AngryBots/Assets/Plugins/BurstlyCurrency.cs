@@ -144,6 +144,7 @@ public static class BurstlyCurrency {
 	/*
 		Sets the GameObject name whose BurstlyCallback method should be called. This method should have a string parameter. The plugin 
 		will pass back a string as follows:
+		
 			UPDATED		if the currency balances were successfully updated from the server
 			FAILED		if the currency balances failed to update from the server
 	 */

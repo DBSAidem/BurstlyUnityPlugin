@@ -330,7 +330,28 @@ public static class BurstlyAds {
 	
 	/*
 		Sets the GameObject name whose BurstlyCallback method should be called. This method should have a string parameter. The plugin 
-		will pass back a string representing the placementName|callbackEvent (pipe-delimited).
+		will pass back a string representing the placementName|callbackEvent (pipe-delimited). The callback events are defined as follows:
+		
+			0x01 = BurstlyEventSucceeded
+                    Called when an ad request succeeds
+            0x02 = BurstlyEventFailed
+                    Called when an ad request fails
+            0x04 = BurstlyEventTakeoverFullscreen
+                    Called when an ad will present a full-screen canvas. This could be either an interstitial being displayed on a canvas 
+                    being presented after a banner is tapped.
+            0x08 = BurstlyEventDismissFullscreen
+                    Called when an ad will dismiss a full-screen canvas. This could be either an interstitial being dismissed or a banner 
+                    canvas being dismissed.
+            0x10 = BurstlyEventHidden
+                    Called when a banner ad is removed from the view hierarchy.
+            0x20 = BurstlyEventShown
+                    Called when a banner ad is added to the view hierarchy.
+            0x40 = BurstlyEventCached
+                    Called when an interstitial ad has been precached.
+            0x80 = BurstlyEventClicked
+                    Called when an ad (either banner or interstitial) is tapped.
+                    
+		For example, a BurstlyEventSucceeded callback event for a placement named "banner" will pass back a string "banner|0".
 	 */
 	public static void setCallbackGameObjectName(string callbackGameObjectName) {
 		if ((Application.platform == RuntimePlatform.OSXEditor) || (Application.platform == RuntimePlatform.WindowsEditor)) return;
