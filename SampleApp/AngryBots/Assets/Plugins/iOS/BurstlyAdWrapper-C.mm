@@ -23,7 +23,7 @@ extern "C" {
 	}
 	
 	void BurstlyAdWrapper_cacheAd(const char *placementName) {
-        [[BurstlyAdWrapperBridge sharedInstance] showAdForPlacement:CreateNSString(placementName)];
+        [[BurstlyAdWrapperBridge sharedInstance] cacheAdForPlacement:CreateNSString(placementName)];
 	}
 
 	void BurstlyAdWrapper_pauseBanner(const char *placementName) {
