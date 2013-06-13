@@ -7,9 +7,9 @@
 
 
 /*
-    BurstlyCallback function pointer typedef for convenience. First argument is the placementName, second argument is a callbackEvent
+    BurstlyCurrencyCallback function pointer typedef for convenience. First argument is the placementName, second argument is a callbackEvent
  */
-typedef void (*BurstlyCallback)(bool);
+typedef void (*BurstlyCurrencyCallback)(bool);
 
 extern "C" {
     

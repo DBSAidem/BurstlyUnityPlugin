@@ -40,9 +40,9 @@ typedef enum {
 
 
 /*
-    BurstlyCallback function pointer typedef for convenience. First argument is the placementName, second argument is a callbackEvent
+    BurstlyAdCallback function pointer typedef for convenience. First argument is the placementName, second argument is a callbackEvent
  */
-typedef void (*BurstlyCallback)(const char *, BurstlyEvent);
+typedef void (*BurstlyAdCallback)(const char *, BurstlyEvent);
 
 extern "C" {
     

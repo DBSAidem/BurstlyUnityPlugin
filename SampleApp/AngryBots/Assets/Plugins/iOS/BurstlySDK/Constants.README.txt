@@ -12,13 +12,14 @@
 #define SERVER_DEFAULT_HOST  [BurstlyUtils updatableString:"req.appads.com"]
 #define SERVER_HOST_MASK  [BurstlyUtils updatableString:"req%d.appads.com"]
 #define NUMBER_OF_SERVER_DNS  [BurstlyUtils updatableString:"3"]
-#define SERVER_ADDRESS_MASK				@"http://%@/"
+#define SERVER_ADDRESS_MASK  [BurstlyUtils updatableString:"http://%@/"]
 #define SERVER_CHECK_TIMEOUT			30
 #define CAPI_SERVER_DEFAULT_HOST  [BurstlyUtils updatableString:"lv.appads.com"]
 #define CAPI_SERVER_HOST_MASK  [BurstlyUtils updatableString:"lv%d.appads.com"]
 #define CAPI_NUMBER_OF_SERVER_DNS  [BurstlyUtils updatableString:"3"]
 #define CAPI_QA_SERVER_HOST             @"lv-qa.appads.com"
 #define CONTENT_URL_BASE                @"http://cdn.appads.com/";
+#define BUILD_ID  [BurstlyUtils updatableString:"89"]
 
 #define CACHE_PARAMS_KEY				@"params"
 #define CACHE_TRACK_DATA_KEY			@"trk"
@@ -33,6 +34,16 @@
 #define EVENTS_FILE_NAME				@"burstly.events"
 #define GOOGLE_ANALYTICS_ID				@"UA-12719703-6"
 #define BANNER_LOADED_NOTIFICATION      @"com.burstly.admanager.bannerloaded"
+
+
+#define DEALLOC(deallocCode)\
+- (void)dealloc {\
+    NSString *instanceInfo = [NSString stringWithFormat: @"%@[%p]", NSStringFromClass([self class]), self];\
+    LOG_DEBUG(@"Deallocation of %@ started.", instanceInfo);\
+    deallocCode\
+    [super dealloc];\
+    LOG_DEBUG(@"Deallocation of %@ finished.", instanceInfo);\
+}
 
 
 
@@ -236,6 +247,7 @@
 #define kMEDIABRIX_APP_ID               @"ccWarCcfkTRYmIOkIXOw"
 #define kMEDIABRIX_BASE_URL             @"http://mobile-staging.mediabrix.com/mediabrix"
 #define kMEDIABRIX_UID                  @""
+#define kMEDIABRIX_FACEBOOK_ID          @""
 #define kMEDIABRIX_AD_UNIT_PATH         @"Burstly_Staging_V2"
 #define kMEDIABRIX_AD_TYPE              @"SocialViews"
 #define kMEDIABRIX_AD_TITLE             @"Please watch this video from our sponsor"
@@ -249,6 +261,7 @@
 #define kMEDIABRIX_APP_ID_KEY           @"appID"
 #define kMEDIABRIX_BASE_URL_KEY         @"baseURL"
 #define kMEDIABRIX_UID_KEY              @"uid"
+#define kMEDIABRIX_FACEBOOK_ID_KEY      @"facebookAppID"
 #define kMEDIABRIX_AD_UNIT_PATH_KEY		@"adUnitPath"
 #define kMEDIABRIX_AD_TYPE_KEY          @"adType"
 #define kMEDIABRIX_AD_TITLE_KEY         @"title"

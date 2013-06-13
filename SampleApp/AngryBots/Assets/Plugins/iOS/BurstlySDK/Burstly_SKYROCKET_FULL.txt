@@ -1,0 +1,16 @@
+author:=Shervin Delband
+email:=sdkbuilds@burstly.com
+timestamp:=2013060519116
+
+local_include:=Burstly_millennial_Adaptor Burstly_inmobi_Adaptor BurstlyCore Millennial/5.0.0 InMobi/3.7.0 BurstlyInstalledAppsTracker BurstlyJSONParser AdMob/6.4.1 BurstlyAdNetwork Burstly_greystripe_Adaptor Burstly_admob_Adaptor BurstlyCurrency Greystripe/4.1.0 JumpTap/2.0.17.2 BurstlyConvenienceLayer BurstlyCommon Burstly_iad_Adaptor Burstly_jumptap_Adaptor Burstly_burstly_Adaptor BurstlyDownloadTracker
+
+arch:=armv7  armv7s  i386 
+type:=release
+thumb:=thumb
+compiler:=llvm
+adHost:=req.appads.com
+adHostMask:=req%d.appads.com
+adHostNumber:=3
+currencyHost:=lv.appads.com
+currencyHostMask:=lv%d.appads.com
+currencyHostNumber:=3

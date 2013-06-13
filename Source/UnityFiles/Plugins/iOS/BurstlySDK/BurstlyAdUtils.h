@@ -6,9 +6,9 @@
 //  Copyright (c) 2012 Burstly. All rights reserved.
 //
 
+#import "BurstlyLoggerConstants.h"
 
-@interface BurstlyAdUtils: NSObject {
-}
+@interface BurstlyAdUtils: NSObject
 
 + (NSString*)version;
 
